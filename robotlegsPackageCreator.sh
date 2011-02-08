@@ -1,9 +1,9 @@
 #!/bin/bash
 
-# Author Francisco Granados
-# Ver: 1.0
+# Author: Francisco Granados y Daniel Martinez
+# Ver: 1.2
 # Desc: Script para crear una ramificacion de carpetas en tu nuevo proyecto de Robotlegs
-# Contact: @GzFrancisco
+# Contact: @GzFrancisco @dannygeek
 # SeeMore: robotlegs.org & riactive.com
 
 if [ -z "$1" ]; then 
@@ -22,42 +22,7 @@ do
 	echo directorio $i creado;
 done
 
-mkdir assets;
-chmod g+rwx assets;
-mkdir interfaces
-chmod g+rwx interfaces;
-mkdir helpers
-chmod g+rwx helpers;
-mkdir context
-chmod g+rwx context;
-mkdir signals
-chmod g+rwx signals;
-mkdir skins
-chmod g+rwx skins;
-mkdir styles
-chmod g+rwx styles;
-mkdir model
-chmod g+rwx model;
-cd model
-mkdir valueobjects
-chmod g+rwx valueobjects;
-cd ..
-mkdir commands
-chmod g+rwx commands;
-mkdir services
-chmod g+rwx services;
-mkdir view
-chmod g+rwx view;
-cd view
-mkdir mediators
-chmod g+rwx mediators;
-mkdir components
-chmod g+rwx components;
-cd components
-mkdir renderers
-chmod g+rwx renderers;
-cd ./../..
-mkdir events
-chmod g+rwx events;
+mkdir assets interfaces helpers context signals skins styles model model/valueobjects commands services view view/mediators view/components view/renderers events
+chmod -R g+rwx *;
 
 exit
